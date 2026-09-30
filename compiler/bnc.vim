@@ -1,5 +1,6 @@
 " Vim compiler file
 " Compiler: Basic Next Native Compiler (bnc)
+" Version: 0.6.0
 " Maintainer: Carlos Quintella
 " License: Mozilla Public License Version 2.0
 

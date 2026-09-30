@@ -1,6 +1,6 @@
 # basicnext-vim
 
-Official Basic Next (0.6) language support for Vim and Neovim in canonical Vimscript.
+**Version 0.6** — Official Basic Next (0.6) language support for Vim and Neovim in canonical Vimscript.
 
 ## Quick Install (Terminal One-Liner)
 
@@ -49,16 +49,16 @@ set runtimepath+=/path/to/basicnext-vim
 ## What It Provides
 
 * **Automatic Filetype**: Associates `*.bn` files with `filetype=basicnext`.
-* **Syntax Highlighting**: Conforms to Basic Next 0.6 grammar with distinct colors (Green commands, Yellow variables, Cyan/Blue types, Red strings, Purple structures, Orange constants).
+* **Syntax Highlighting**: Conforms to Basic Next 0.6 grammar with distinct colors (Green commands, Yellow variables, Cyan/Blue types, Red strings, Lilac structures and functions, Orange loops, Dark Yellow constants and numbers).
 * **Smart Indentation**: Automatically indents and aligns blocks (`FUNCTION`, `IF`/`ELSE`, `WHILE`, `FOR`, `CLASS`, `STRUCT`, `INTERFACE`, `REPEAT`/`UNTIL`).
 * **ALLCAPS Autocomplete**: Native `omnifunc` (`<C-X><C-O>`) matching case-insensitively and completing in ALLCAPS.
 * **Auto-Capitalization**: Automatically uppercases reserved keywords upon typing space/punctuation (enabled by default; toggle with `let g:basicnext_auto_caps = 0`).
 * **Formatting**:
   * Reindent with `=` (`==` for line, `gg=G` for entire file).
-  * Semantic format with `:BasicNextFormat` or `gq` operator (uppercases keywords outside comments/strings and normalizes `END KEYWORD` spacing).
+  * Semantic format with `:BnFormat` or `gq` operator (uppercases keywords outside comments/strings and normalizes `END KEYWORD` spacing).
 * **Block Navigation**: `%` navigates between block openings and closers using Vim's built-in `matchit`.
 * **Commands**:
-  * `:BasicNextFormat`: Formats and reindents the active buffer.
+  * `:BnFormat`: Formats and reindents the active buffer (aliases: `:BNFormat`, `:BasicNextFormat`).
   * `:BasicNextRun [args]`: Executes the current file with `bni run`.
   * `:BasicNextCheck [args]`: Checks the current file with `bni check`.
 

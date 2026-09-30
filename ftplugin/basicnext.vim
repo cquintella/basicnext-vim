@@ -1,5 +1,6 @@
 " Vim filetype plugin
 " Language: Basic Next (0.6)
+" Version: 0.6.0
 " Maintainer: Carlos Quintella
 " License: Mozilla Public License Version 2.0
 
@@ -50,12 +51,16 @@ endif
 " Buffer-local commands
 command! -buffer -bang -nargs=* BasicNextRun execute '!bni run ' . expand('%:p') . ' ' . <q-args>
 command! -buffer -bang -nargs=* BasicNextCheck execute '!bni check ' . expand('%:p') . ' ' . <q-args>
+command! -buffer -bang -bar BnFormat call basicnext#Format()
+command! -buffer -bang -bar BNFormat call basicnext#Format()
 command! -buffer -bang -bar BasicNextFormat call basicnext#Format()
 
 let b:undo_ftplugin = "setlocal comments< commentstring< formatoptions< omnifunc< formatexpr<"
       \ . " | unlet! b:match_words b:match_ignorecase"
       \ . " | silent! delcommand BasicNextRun"
       \ . " | silent! delcommand BasicNextCheck"
+      \ . " | silent! delcommand BnFormat"
+      \ . " | silent! delcommand BNFormat"
       \ . " | silent! delcommand BasicNextFormat"
 
 let &cpo = s:cpo_save
